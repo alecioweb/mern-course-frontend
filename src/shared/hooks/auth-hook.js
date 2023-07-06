@@ -53,6 +53,8 @@ export const useAuth = () => {
         storedData.token,
         new Date(storedData.expiration)
       );
+    } else {
+      localStorage.removeItem("userData");
     }
   }, [login]);
 
